@@ -47,11 +47,11 @@ const orderSchema = new mongoose.Schema(
 const Product = mongoose.model("Product", productSchema);
 const Order = mongoose.model("Order", orderSchema);
 
-app.use(
-  cors({
-    origin: process.env.CLIENT_URL || "http://localhost:5173",
-  })
-);
+// app.use(
+//   cors({
+//     origin: process.env.CLIENT_URL || "http://localhost:5173",
+//   })
+// );
 app.use(express.json());
 
 app.get("/api/health", (_req, res) => {
